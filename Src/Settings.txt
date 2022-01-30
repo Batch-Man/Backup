@@ -1,0 +1,12 @@
+# All Lines after '#' are comments
+
+_FTPid=192.168.1.68
+_Port=2121
+_User=a
+_Password=1
+
+_RemoteBackupPath=/_Backup
+
+
+# Do not touch these settings...
+_Mode=Binary
