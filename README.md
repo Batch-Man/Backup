@@ -1,5 +1,5 @@
 
-# Backup - by Kvc
+# Backup
 ## Description
 This program can backup your PC Folders to Your FTP server easily.
 
