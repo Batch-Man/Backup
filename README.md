@@ -13,4 +13,4 @@ Example:
 
 
 
-www.batch-man.com
+Article- https://batch-man.com/easy-ftp-backup-with-batch-application/
