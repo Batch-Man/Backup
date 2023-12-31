@@ -1,6 +1,6 @@
 # All Lines after '#' are comments
 
-_FTPid=192.168.1.68
+_FTPid=192.168.0.106
 _Port=2121
 _User=a
 _Password=1

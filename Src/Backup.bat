@@ -25,8 +25,7 @@ REM For More Visit: www.batch-man.com
 
 
 REM Setting version information...
-Set _ver=20220130
-
+Set _ver=20231231
 
 REM Checking for various parameters of the function...
 for %%A in ("--help" "-h" "-help") do (if /i "%%A" == "%~1" (goto :help))
@@ -46,9 +45,13 @@ REM Reading the Settings...
 If NOT Exist "%~dp0Settings.txt" (Echo. Settings File missing.... &&Goto :End)
 
 For /f "usebackq eol=# delims== tokens=1,2*" %%A in ("%~dp0Settings.txt") do (set "%%~A=%%~B")
+
+REM verifying, if the FTP server can be Pinged...
+ping -n 1 !_FTPid! -w 10 2>nul >nul && (echo FTP SERVER is LIVE...) || (echo FTP SERVER NOT ACTIVE... & Pause)
+
 REM Just in case, if the backup.bat is not in the same folder
 REM and called from PATH location instead
-If /i "!_1!" NEQ "" (Cd /d "!_1!") ELSE (Goto :End)
+If /i "!_1!" NEQ "" (Pushd "!_1!") ELSE (Goto :End)
 
 REM Zipping current folder
 For %%I in (.) do set _ZipName=%%~nxI

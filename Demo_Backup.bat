@@ -12,7 +12,7 @@ Echo.
 Echo. ================================================================
 :Top
 Echo.
-Echo. Enter the Path of the FOlder to Backup:
+Echo. Enter the Path of the Folder to Backup:
 Set /p "_Path=>"
 IF Not defined _Path (Goto :Top)
 IF NOT Exist "%_Path%" (Goto :Top)
